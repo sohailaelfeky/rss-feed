@@ -7,7 +7,7 @@ import "../Styles/Card.scss";
 
 export default function Card() {
   const [news, setNews] = useState([]);
-  const [pageNumber, setPageNumber] = useState(1);
+  // const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(false);
   const [arrLength, setArrLength] = useState(0);
   const [offset, setOffset] = useState(0);
@@ -32,7 +32,7 @@ export default function Card() {
     };
 
     fetchData();
-  }, [pageNumber, offset]);
+  }, [offset]);
 
   const pageEnd = useRef();
 
@@ -58,7 +58,7 @@ export default function Card() {
   }, [loading, arrLength]);
 
   function loadData() {
-    setPageNumber((pageNumber) => pageNumber + 1);
+    // setPageNumber((pageNumber) => pageNumber + 1);
     setOffset((offset) => offset + size);
   }
 

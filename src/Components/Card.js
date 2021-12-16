@@ -31,7 +31,7 @@ export default function Card() {
     };
 
     setTimeout(() => {
-      fetchData();
+      fetchData().then(() => setSkeleton(false));
     }, 2000);
   }, [offset]);
 
@@ -45,6 +45,7 @@ export default function Card() {
         (entries) => {
           if (entries[0].isIntersecting) {
             num++;
+            setSkeleton(true);
             loadData();
           }
           if (num >= Math.ceil(arrLength / size)) {
@@ -62,8 +63,8 @@ export default function Card() {
 
   function loadData() {
     setOffset((offset) => offset + size);
-    setSkeleton(true);
-    console.log("load data");
+    // setSkeleton(true);
+    // console.log("load data");
   }
 
   useEffect(() => {
@@ -104,19 +105,15 @@ export default function Card() {
     );
   }
 
+  let skeleton = <></>;
   if (skeletonOn) {
-    return (
-      <section className="news--skeleton">
-        {news.map((card) => createNewsList(card))}
-        <SkeletonElement size={size} />
-        <div ref={pageEnd}></div>
-      </section>
-    );
+    skeleton = <SkeletonElement size={size} />;
   }
 
   return (
     <section className="news">
       {news.map((card) => createNewsList(card))}
+      {skeleton}
       <div ref={pageEnd}></div>
     </section>
   );

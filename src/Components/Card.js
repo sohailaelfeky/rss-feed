@@ -1,5 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+
+// import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+// import "react-loading-skeleton/dist/skeleton.css";
 import "../Styles/Card.scss";
 
 export default function Card() {
@@ -7,21 +10,28 @@ export default function Card() {
   const [pageNumber, setPageNumber] = useState(6);
   const [loading, setLoading] = useState(false);
   const [arrLength, setArrLength] = useState(0);
+  const [offset, setOffset] = useState(0);
 
-  const baseURL = "http://localhost:8080/";
+  const baseURL = "http://localhost:8080";
 
   let num = 1;
+  const size = 8;
 
   useEffect(() => {
     fetchData();
   }, [pageNumber]);
 
   const fetchData = async () => {
-    axios.get(`${baseURL}`).then((res) => {
-      const persons = res.data;
-      setNews((news) => [...news, ...persons]);
-    });
-    setLoading(true);
+    // setLoading(true);
+    return axios
+      .get(`${baseURL}/${offset}/${size}`)
+      .then((res) => {
+        const persons = res.data.list;
+        setNews((news) => [...news, ...persons]);
+      })
+      .catch((err) => {
+        console.log("error one");
+      });
   };
 
   const pageEnd = useRef();
@@ -34,8 +44,9 @@ export default function Card() {
             num++;
             loadData();
           }
-          if (num >= 8) {
+          if (num >= arrLength / size + 1) {
             observer.unobserve(pageEnd.current);
+            console.log("done");
           }
         },
         {
@@ -48,10 +59,19 @@ export default function Card() {
 
   function loadData() {
     setPageNumber((pageNumber) => pageNumber + 1);
+    setOffset((offset) => offset + size);
   }
-
   const fetchLength = async () => {
-    axios.get(`/length`).then((res) => console.log(res));
+    await axios
+      .get(`${baseURL}/length`)
+      .then((res) => {
+        const persons = res.data.len;
+        setArrLength(persons);
+        console.log(arrLength);
+      })
+      .catch((err) => {
+        console.log("error two");
+      });
   };
 
   useEffect(() => {

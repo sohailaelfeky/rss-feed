@@ -22,8 +22,7 @@ export default function Card() {
   }, [pageNumber]);
 
   const fetchData = async () => {
-    // setLoading(true);
-    return axios
+    axios
       .get(`${baseURL}/${offset}/${size}`)
       .then((res) => {
         const persons = res.data.list;
@@ -32,6 +31,7 @@ export default function Card() {
       .catch((err) => {
         console.log("error one");
       });
+    setLoading(true);
   };
 
   const pageEnd = useRef();

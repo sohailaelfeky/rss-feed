@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import Card from "./Components/Card";
 
 function App() {

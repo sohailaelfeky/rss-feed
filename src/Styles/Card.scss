@@ -9,6 +9,7 @@
 
 .news {
   display: flex;
+  // flex-direction: row;
   gap: 50px;
   flex-wrap: wrap;
   align-items: center;
@@ -23,6 +24,8 @@
     height: 450px;
     width: 300px;
     display: flex;
+    margin: 0;
+
     flex-direction: column;
     font-size: 16px;
 

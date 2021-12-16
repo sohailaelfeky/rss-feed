@@ -1,39 +1,40 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import axios from "axios";
 import "../Styles/Card.scss";
 
 export default function Card() {
   const [news, setNews] = useState([]);
   const [pageNumber, setPageNumber] = useState(6);
   const [loading, setLoading] = useState(false);
+  const [arrLength, setArrLength] = useState(0);
 
   const baseURL = "http://localhost:8080/";
 
+  let num = 1;
+
   useEffect(() => {
-    fetchData(pageNumber);
+    fetchData();
   }, [pageNumber]);
 
-  const fetchData = async (pageNumber) => {
-    const result = await fetch(`${baseURL}?page=${pageNumber}`);
-    const data = await result.json();
-    setNews((news) => [...news, ...data.newsList]);
+  const fetchData = async () => {
+    axios.get(`${baseURL}`).then((res) => {
+      const persons = res.data;
+      setNews((news) => [...news, ...persons]);
+    });
     setLoading(true);
   };
 
-  const loadMore = () => {};
-
   const pageEnd = useRef();
-  let num = 1;
+
   useEffect(() => {
     if (loading) {
-      setLoading(false);
       const observer = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting) {
             num++;
-            loadMore();
+            loadData();
           }
-          if (num >= 5) {
+          if (num >= 8) {
             observer.unobserve(pageEnd.current);
           }
         },
@@ -43,9 +44,19 @@ export default function Card() {
       );
       observer.observe(pageEnd.current);
     }
-  }, [loading, num]);
+  }, [loading]);
 
-  function loadData() {}
+  function loadData() {
+    setPageNumber((pageNumber) => pageNumber + 1);
+  }
+
+  const fetchLength = async () => {
+    axios.get(`/length`).then((res) => console.log(res));
+  };
+
+  useEffect(() => {
+    fetchLength();
+  }, []);
 
   function createNewsList(news) {
     return (
@@ -69,9 +80,8 @@ export default function Card() {
   }
 
   return (
-    <section>
-      {/* {news.map((tmp) => createNewsList(tmp))} */}
-      {loadData()}
+    <section className="news">
+      {news.map((card) => createNewsList(card))}
       <div ref={pageEnd}></div>
     </section>
   );

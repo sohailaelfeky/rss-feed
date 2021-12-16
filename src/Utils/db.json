@@ -1,66 +1,193 @@
 {
-	"newsList": [{
-			"source": "BBC Good Food",
-			"image": "https://saladswithanastasia.com/wp-content/uploads/2020/10/GREEN-CORAL-SALAD-FEATURED-1.jpg",
-			"creator": "creator",
-			"dateTimeToRead": "Today 2m read",
-			"title": "title",
-			"shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
-			"link": "https://colorhunt.co/"
-		},
-		{
-			"source": "Food Networks",
-			"image": "https://www.onceuponachef.com/images/2019/07/Big-Italian-Salad.jpg",
-			"creator": "creator",
-			"dateTimeToRead": "Today 2m read",
-			"title": "title",
-			"shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
-			"link": "https://colorhunt.co/"
-		},
-		{
-			"source": "Fatafeat",
-			"image": "https://saladswithanastasia.com/wp-content/uploads/2020/10/GREEN-CORAL-SALAD-FEATURED-1.jpg",
-			"creator": "creator",
-			"dateTimeToRead": "Today 2m read",
-			"title": "title",
-			"shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
-			"link": "https://colorhunt.co/"
-		},
-		{
-			"source": "NYC Cooking",
-			"image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
-			"creator": "creator",
-			"dateTimeToRead": "Today 2m read",
-			"title": "title",
-			"shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
-			"link": "https://colorhunt.co/"
-		},
-		{
-			"source": "Anna Olson",
-			"image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
-			"creator": "creator",
-			"dateTimeToRead": "Today 2m read",
-			"title": "title",
-			"shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
-			"link": "https://colorhunt.co/"
-		},
-		{
-			"source": "Anna Olson",
-			"image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
-			"creator": "creator",
-			"dateTimeToRead": "Today 2m read",
-			"title": "title",
-			"shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
-			"link": "https://colorhunt.co/"
-		},
-		{
-			"source": "Anna Olson",
-			"image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
-			"creator": "creator",
-			"dateTimeToRead": "Today 2m read",
-			"title": "title",
-			"shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
-			"link": "https://colorhunt.co/"
-		}
-	]
+  "newsList": [
+    {
+      "source": "BBC Good Food",
+      "image": "https://saladswithanastasia.com/wp-content/uploads/2020/10/GREEN-CORAL-SALAD-FEATURED-1.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Food Networks",
+      "image": "https://www.onceuponachef.com/images/2019/07/Big-Italian-Salad.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Fatafeat",
+      "image": "https://saladswithanastasia.com/wp-content/uploads/2020/10/GREEN-CORAL-SALAD-FEATURED-1.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "NYC Cooking",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Anna Olson",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Anna Olson",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Anna Olson",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "BBC Good Food",
+      "image": "https://saladswithanastasia.com/wp-content/uploads/2020/10/GREEN-CORAL-SALAD-FEATURED-1.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Food Networks",
+      "image": "https://www.onceuponachef.com/images/2019/07/Big-Italian-Salad.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Fatafeat",
+      "image": "https://saladswithanastasia.com/wp-content/uploads/2020/10/GREEN-CORAL-SALAD-FEATURED-1.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "NYC Cooking",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Anna Olson",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Anna Olson",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Anna Olson",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "BBC Good Food",
+      "image": "https://saladswithanastasia.com/wp-content/uploads/2020/10/GREEN-CORAL-SALAD-FEATURED-1.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Food Networks",
+      "image": "https://www.onceuponachef.com/images/2019/07/Big-Italian-Salad.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Fatafeat",
+      "image": "https://saladswithanastasia.com/wp-content/uploads/2020/10/GREEN-CORAL-SALAD-FEATURED-1.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "NYC Cooking",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Anna Olson",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Anna Olson",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    },
+    {
+      "source": "Anna Olson",
+      "image": "https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg",
+      "creator": "creator",
+      "dateTimeToRead": "Today 2m read",
+      "title": "title",
+      "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida elit quis erat porttitor, lobortis vulputate purus vulputate. ",
+      "link": "https://colorhunt.co/"
+    }
+  ]
 }

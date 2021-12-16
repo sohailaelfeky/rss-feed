@@ -7,7 +7,7 @@ import "../Styles/Card.scss";
 
 export default function Card() {
   const [news, setNews] = useState([]);
-  const [pageNumber, setPageNumber] = useState(6);
+  const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(false);
   const [arrLength, setArrLength] = useState(0);
   const [offset, setOffset] = useState(0);
@@ -18,21 +18,21 @@ export default function Card() {
   const size = 8;
 
   useEffect(() => {
-    fetchData();
-  }, [pageNumber]);
+    const fetchData = async () => {
+      axios
+        .get(`${baseURL}/${offset}/${size}`)
+        .then((res) => {
+          const persons = res.data.list;
+          setNews((news) => [...news, ...persons]);
+        })
+        .catch((err) => {
+          console.log("error one");
+        });
+      setLoading(true);
+    };
 
-  const fetchData = async () => {
-    axios
-      .get(`${baseURL}/${offset}/${size}`)
-      .then((res) => {
-        const persons = res.data.list;
-        setNews((news) => [...news, ...persons]);
-      })
-      .catch((err) => {
-        console.log("error one");
-      });
-    setLoading(true);
-  };
+    fetchData();
+  }, [pageNumber, offset]);
 
   const pageEnd = useRef();
 
@@ -55,26 +55,27 @@ export default function Card() {
       );
       observer.observe(pageEnd.current);
     }
-  }, [loading]);
+  }, [loading, arrLength]);
 
   function loadData() {
     setPageNumber((pageNumber) => pageNumber + 1);
     setOffset((offset) => offset + size);
   }
-  const fetchLength = async () => {
-    await axios
-      .get(`${baseURL}/length`)
-      .then((res) => {
-        const persons = res.data.len;
-        setArrLength(persons);
-        console.log(arrLength);
-      })
-      .catch((err) => {
-        console.log("error two");
-      });
-  };
 
   useEffect(() => {
+    const fetchLength = async () => {
+      await axios
+        .get(`${baseURL}/length`)
+        .then((res) => {
+          const persons = res.data.len;
+          setArrLength(persons);
+          // console.log(arrLength);
+        })
+        .catch((err) => {
+          console.log("error two");
+        });
+    };
+
     fetchLength();
   }, []);
 

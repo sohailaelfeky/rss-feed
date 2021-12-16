@@ -9,7 +9,7 @@
     border: 1px solid #c3b091;
     border-radius: 5%;
     padding: 20px 20px 0 20px;
-    background-color: #fddaee;
+    background-color: #d6d6d6;
     height: 450px;
     width: 300px;
     display: flex;
@@ -24,41 +24,41 @@
     &--name {
       height: 40px;
       width: 80%;
-      background-color: blueviolet;
+      background-color: rgb(148, 148, 148);
       margin-bottom: 5px;
     }
     &--wrapper {
       height: 40%;
       width: 100%;
       margin-bottom: 5px;
-      background-color: blueviolet;
+      background-color: rgb(148, 148, 148);
     }
 
     &--creator {
       height: 20px;
       width: 40%;
-      background-color: blueviolet;
+      background-color: rgb(148, 148, 148);
       margin-bottom: 5px;
     }
 
     &--date {
       height: 20px;
       width: 60%;
-      background-color: blueviolet;
+      background-color: rgb(148, 148, 148);
       margin-bottom: 3px;
     }
 
     &--desc {
       height: 80px;
       width: 100%;
-      background-color: blueviolet;
+      background-color: rgb(148, 148, 148);
       margin-bottom: 5px;
     }
 
     &--link {
       height: 20px;
       width: 100%;
-      background-color: blueviolet;
+      background-color: rgb(148, 148, 148);
       margin-bottom: 5px;
     }
   }

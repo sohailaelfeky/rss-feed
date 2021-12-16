@@ -1,0 +1,65 @@
+.skeleton {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  &__card {
+    border: 1px solid #c3b091;
+    border-radius: 5%;
+    padding: 20px 20px 0 20px;
+    background-color: #fddaee;
+    height: 450px;
+    width: 300px;
+    display: flex;
+
+    margin: 0;
+    flex-direction: column;
+
+    p {
+      margin: 5px 0;
+    }
+
+    &--name {
+      height: 40px;
+      width: 80%;
+      background-color: blueviolet;
+      margin-bottom: 5px;
+    }
+    &--wrapper {
+      height: 40%;
+      width: 100%;
+      margin-bottom: 5px;
+      background-color: blueviolet;
+    }
+
+    &--creator {
+      height: 20px;
+      width: 40%;
+      background-color: blueviolet;
+      margin-bottom: 5px;
+    }
+
+    &--date {
+      height: 20px;
+      width: 60%;
+      background-color: blueviolet;
+      margin-bottom: 3px;
+    }
+
+    &--desc {
+      height: 80px;
+      width: 100%;
+      background-color: blueviolet;
+      margin-bottom: 5px;
+    }
+
+    &--link {
+      height: 20px;
+      width: 100%;
+      background-color: blueviolet;
+      margin-bottom: 5px;
+    }
+  }
+}

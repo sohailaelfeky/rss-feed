@@ -7,9 +7,9 @@
   margin: 0;
 }
 
-.news {
+.news,
+.news--skeleton {
   display: flex;
-  // flex-direction: row;
   gap: 50px;
   flex-wrap: wrap;
   align-items: center;
@@ -17,7 +17,7 @@
   padding: 20px 0;
 
   &__card {
-    border: 1px solid c3b091;
+    border: 1px solid #c3b091;
     border-radius: 5%;
     padding: 20px 20px 0 20px;
     background-color: #fddaee;

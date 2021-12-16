@@ -1,16 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
+import SkeletonElement from "../Skeletons/Skeleton";
 
-// import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
-// import "react-loading-skeleton/dist/skeleton.css";
 import "../Styles/Card.scss";
 
 export default function Card() {
   const [news, setNews] = useState([]);
-  // const [pageNumber, setPageNumber] = useState(1);
   const [loading, setLoading] = useState(false);
   const [arrLength, setArrLength] = useState(0);
   const [offset, setOffset] = useState(0);
+  const [skeletonOn, setSkeleton] = useState(false);
 
   const baseURL = "http://localhost:8080";
 
@@ -19,7 +18,7 @@ export default function Card() {
 
   useEffect(() => {
     const fetchData = async () => {
-      axios
+      await axios
         .get(`${baseURL}/${offset}/${size}`)
         .then((res) => {
           const persons = res.data.list;
@@ -31,22 +30,26 @@ export default function Card() {
       setLoading(true);
     };
 
-    fetchData();
+    setTimeout(() => {
+      fetchData();
+    }, 2000);
   }, [offset]);
 
   const pageEnd = useRef();
 
   useEffect(() => {
     if (loading) {
+      console.log(num);
+      console.log(Math.ceil(arrLength / size));
       const observer = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting) {
             num++;
             loadData();
           }
-          if (num >= arrLength / size + 1) {
+          if (num >= Math.ceil(arrLength / size)) {
             observer.unobserve(pageEnd.current);
-            console.log("done");
+            console.log("unobserve");
           }
         },
         {
@@ -58,8 +61,9 @@ export default function Card() {
   }, [loading, arrLength]);
 
   function loadData() {
-    // setPageNumber((pageNumber) => pageNumber + 1);
     setOffset((offset) => offset + size);
+    setSkeleton(true);
+    console.log("load data");
   }
 
   useEffect(() => {
@@ -69,7 +73,6 @@ export default function Card() {
         .then((res) => {
           const persons = res.data.len;
           setArrLength(persons);
-          // console.log(arrLength);
         })
         .catch((err) => {
           console.log("error two");
@@ -77,6 +80,7 @@ export default function Card() {
     };
 
     fetchLength();
+    setSkeleton(true);
   }, []);
 
   function createNewsList(news) {
@@ -96,6 +100,16 @@ export default function Card() {
         <a className="news__card--link" href={news.link}>
           Read More
         </a>
+      </section>
+    );
+  }
+
+  if (skeletonOn) {
+    return (
+      <section className="news--skeleton">
+        {news.map((card) => createNewsList(card))}
+        <SkeletonElement size={size} />
+        <div ref={pageEnd}></div>
       </section>
     );
   }

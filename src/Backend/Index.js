@@ -23,9 +23,9 @@ app.get("/length", (req, res) => {
 app.get("/:offset/:size", (req, res) => {
   const result = list.slice(
     req.params.offset,
-    req.params.offset + req.params.size
+    Number(req.params.offset) + Number(req.params.size)
   );
-  console.log(req.params.offset + " " + req.params.size);
+  console.log(Number(req.params.offset) + "hello" + Number(req.params.size));
   res.json({ list: result });
 });
 

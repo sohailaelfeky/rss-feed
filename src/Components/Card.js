@@ -15,6 +15,7 @@ export default function Card() {
 
   let num = 1;
   const size = 8;
+  const pageEnd = useRef();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,15 +33,11 @@ export default function Card() {
 
     setTimeout(() => {
       fetchData().then(() => setSkeleton(false));
-    }, 2000);
+    }, 5000);
   }, [offset]);
-
-  const pageEnd = useRef();
 
   useEffect(() => {
     if (loading) {
-      console.log(num);
-      console.log(Math.ceil(arrLength / size));
       const observer = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting) {
@@ -50,7 +47,6 @@ export default function Card() {
           }
           if (num >= Math.ceil(arrLength / size)) {
             observer.unobserve(pageEnd.current);
-            console.log("unobserve");
           }
         },
         {
@@ -60,12 +56,6 @@ export default function Card() {
       observer.observe(pageEnd.current);
     }
   }, [loading, arrLength]);
-
-  function loadData() {
-    setOffset((offset) => offset + size);
-    // setSkeleton(true);
-    // console.log("load data");
-  }
 
   useEffect(() => {
     const fetchLength = async () => {
@@ -83,6 +73,10 @@ export default function Card() {
     fetchLength();
     setSkeleton(true);
   }, []);
+
+  function loadData() {
+    setOffset((offset) => offset + size);
+  }
 
   function createNewsList(news) {
     return (
